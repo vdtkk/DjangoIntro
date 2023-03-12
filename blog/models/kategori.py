@@ -6,9 +6,9 @@ class KategoriModel(models.Model):
     slug = AutoSlugField(populate_from='isim',unique=True)
 
     class Meta:
-     db_table='blog_kategorimodel'
-     verbose_name_plural ='Kategoriler'
-     verbose_name='Kategoriler1'
+         db_table='kategori'
+         verbose_name_plural ='Kategoriler'
+         verbose_name='Kategoriler'
 
     def __str__(self):
-        return self.isim
+            return self.isim
