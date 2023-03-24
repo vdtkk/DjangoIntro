@@ -10,7 +10,7 @@ admin.site.register(KategoriModel)
 @admin.register(YazilarModel)
 class yazilarAdmin(admin.ModelAdmin):
     
-    search_fields=('baslik','icerik') #searh ekledik
+    search_fields=('baslik','icerik') #searhC ekledik
     list_display=(
         'baslik','olusturulma_Tarihi','duzenlenme_tarihi' #olustuma tarihi ekledik
     )
