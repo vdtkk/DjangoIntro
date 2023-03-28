@@ -1,5 +1,5 @@
 {%extends 'base.html' %}
-{% block title %} ANASAYFA {% endblock %}
+{% block title %} iletisim {% endblock %}
 
 {% block content %}
 
@@ -21,6 +21,15 @@
         </div>
     </div>
 </div>
+
+
 </form>
 
+{{key | truncatechars:5}}
+
+{% if sayi == 6 %}
+sayi dir
+{%else%}
+değildir
+{% endif %}
 {% endblock %}
