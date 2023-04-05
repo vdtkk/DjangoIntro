@@ -12,7 +12,7 @@ class YorumModel(DateAbstractModel):
 
     class Meta:
         db_table='yorum'
-        verbose_name='Yorum'
-        verbose_name_plural='Yorumlar'
+        verbose_name='yorum'
+        verbose_name_plural='yorumlar'
     def __str__(self):
         return self.yazan.username
