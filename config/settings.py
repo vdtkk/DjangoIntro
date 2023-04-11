@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'account',
     #third party app
 
-    'ckeditor'
+    'ckeditor',
+    'crispy_forms'
     
     ]
 
@@ -131,7 +132,8 @@ STATICFILES_DIRS=[
 ]
 
 AUTH_USER_MODEL='account.CustomUserModel'
-
+DEFAULT_AUTO_FIELD='django.db.models.AutoField'
 
 MEDIA_URL='/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
