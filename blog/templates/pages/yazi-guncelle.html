@@ -1,0 +1,22 @@
+test{%extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block title %} Yazı Ekle {% endblock %}
+
+{% block content %}
+
+
+{{key | truncatechars:5}}
+<form action="{% url 'yazi' %}" enctype="multipart/form-data" method="POST">{% csrf_token %}
+
+    {{form.media }}
+    {{form | crispy }}
+
+    <!-- {{form.isim_soyisim}} - {{form.isim_soyisim.errors}} - {{form.isim_soyisim.label}}
+    {{form.email}} - {{form.email.errors}}- {{form.email.label}}
+    {{form.mesaj}}- {{form.mesaj.errors}}- {{form.mesaj.label}} -->
+
+    <input type="submit" value="Yazı Güncelle" class="btn btn-danger mt-3 mb-3" />
+</form>
+
+
+{% endblock %}

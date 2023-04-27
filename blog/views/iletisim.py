@@ -6,6 +6,16 @@ from blog.models import iletisimModel
 
 def iletisim(request):
     form=Iletisimform ()
+
+
+    #---burada data ve initial farkını görüntüledik----
+    # #(data={ #initial yazılır ise  form başlangıç değeri anlamına gelir ve aşağıda fieldlar tanımlanır.
+    #     'isim_soyisim':'',
+    #     'email':'vdtkk@mynet.com.tr',
+    #     'mesaj': 'bu bir testtir'
+    # })
+
+
     if request.method=='POST':
       
         form= Iletisimform(request.POST)
