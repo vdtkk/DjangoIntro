@@ -6,7 +6,7 @@ test{%extends 'base.html' %}
 
 
 {{key | truncatechars:5}}
-<form action="{% url 'yazi' %}" enctype="multipart/form-data" method="POST">{% csrf_token %}
+<form enctype="multipart/form-data" method="POST">{% csrf_token %}
 
     {{form.media }}
     {{form | crispy }}
