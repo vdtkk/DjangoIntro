@@ -8,6 +8,7 @@ from blog.views import (
     yazi_ekle,
     yazi_guncelle,
     yazi_sil,
+    yorum_sil,
 )
 
 # from django.contrib.auth import view as aut_views
@@ -19,6 +20,7 @@ urlpatterns = [
     path("yazilarim", yazilarim, name="yazilarim"),
     path("detay/<slug:slug>", detay, name="detay"),
     path("yazi-sil/<slug:slug>", yazi_sil, name="yazi-sil"),
+    path("yorum-sil/<int:id>", yorum_sil, name="yorum-sil"),
     path("yazi-ekle", yazi_ekle, name="yazi"),
     path("yazi-guncelle/<slug:slug>", yazi_guncelle, name="yazi-guncelle"),
 ]
